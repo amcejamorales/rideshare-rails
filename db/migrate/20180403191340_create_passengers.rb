@@ -3,7 +3,7 @@ class CreatePassengers < ActiveRecord::Migration[5.1]
     create_table :passengers do |t|
       t.string :name
       t.string :phone_num
-
+      
       t.timestamps
     end
   end
