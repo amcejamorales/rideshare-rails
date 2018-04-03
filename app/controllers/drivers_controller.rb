@@ -4,13 +4,16 @@ class DriversController < ApplicationController
   end
 
   def new
-    new_driver = Driver.new
+    new_driver = Driver.new(driver_params)
   end
 
   def create
+    driver = Driver.find(params[:id])
+
   end
 
   def show
+    @driver = Driver.find(params[:id])
   end
 
   def edit
