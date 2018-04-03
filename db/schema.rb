@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 20180403224950) do
 
   create_table "passengers", force: :cascade do |t|
     t.string "name"
-    t.string "phonenumber"
+    t.string "phone_num"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

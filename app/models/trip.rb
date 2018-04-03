@@ -1,4 +1,4 @@
 class Trip < ApplicationRecord
-  has_many :drivers
-  has_many :passengers
+  belongs_to :driver
+  belongs_to :passenger
 end
