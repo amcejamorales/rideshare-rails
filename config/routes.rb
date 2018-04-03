@@ -6,6 +6,6 @@ Rails.application.routes.draw do
 
     resources :trips
     resources :passenger
-    resources :driver
+    resources :drivers
 
 end
