@@ -23,6 +23,7 @@
         <%= trip.passenger.name %>
         <%= trip.rating %>
         <%= trip.cost %>
+        <%= link_to 'View Trip', trip_path(trip) %> 
       </li>
     <% end %>
   </ul>
