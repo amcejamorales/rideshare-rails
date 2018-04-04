@@ -1,0 +1,23 @@
+<h4>
+  <% page_title ||= "Passenger Changes" %>
+  <%= page_title %>
+</h4>
+
+<%= form_for @passenger do |f| %>
+<div>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+</div>
+
+
+
+
+<div>
+  <%= f.label :phone_num %>
+  <%= f.text_area :phone_num %>
+</div>
+
+<div>
+  <%= f.submit %>
+</div>
+<% end %>
