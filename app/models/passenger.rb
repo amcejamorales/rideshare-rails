@@ -2,6 +2,8 @@ include ActionView::Helpers::NumberHelper
 
 class Passenger < ApplicationRecord
   has_many :trips
+  validates :phone_num, presence: true
+  validates :name, presence: true
 
   def passenger_total
    total_cost = 0
