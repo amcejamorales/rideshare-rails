@@ -24,13 +24,27 @@ class TripsController < ApplicationController
   end
 
   def edit
+    @trip = Trip.find(params[:id])
+
   end
 
   def update
+    @trip = Trip.find(params[:id])
+    @trip.assign_attributes(trip_params)
+
+    if @trip.save
+      redirect_to trips_path
+    end
+
 
   end
 
   def destroy
+    trip = Trip.find(params[:id])
+
+    if trip.destroy
+      redirect_to trips_path
+    end
 
   end
 

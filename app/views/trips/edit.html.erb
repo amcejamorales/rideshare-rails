@@ -1,0 +1,7 @@
+<%= form_for @trip do |f| %>
+<h3> Edit the rating for number <%= @trip.id%> </h3>
+<%= f.label :rating %>
+<% rating = [1,2,3,4,5] %>
+<%= f.select :rating, rating, include_blank: false %>
+<%= f.submit %>
+<% end %>
