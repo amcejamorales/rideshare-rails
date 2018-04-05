@@ -28,12 +28,13 @@
   <li> Cost:
     <%= trip.cost %>
   </li>
+    <li>View Trip <%= link_to trip.id, trip_path(trip) %></li>
 </p>
   <% end %>
 </section>
 
 <section>
-  <h3> This passenger was charged total.</h3>
+  <h3> This passenger was charged <%= @passenger.passenger_total %></h3>
 </section>
 
 

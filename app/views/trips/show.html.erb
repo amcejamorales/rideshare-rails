@@ -3,7 +3,7 @@
   <h3>Trip ID:<%= @trip.id %></h3>
   <h3>Passenger:<%=link_to @trip.passenger.name, passenger_path(@trip.passenger) %></h3>
   <h3>Driver:<%= link_to @trip.driver.name, driver_path(@trip.driver) %></h3>
-  <h3>Cost: <%= @trip.cost %></h3>
+  <h3>Cost: <%= @trip.convert_to_currency(@trip.cost) %></h3>
   <h3>Date: <%= @trip.date %></h3>
   <h3>Rating:<%= @trip.rating %></h3>
   <%= link_to "Change the rating for this trip", edit_trip_path %>
