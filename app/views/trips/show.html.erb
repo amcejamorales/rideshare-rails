@@ -1,8 +1,8 @@
 <section>
   <h2>Trip Details</h2>
   <h3>Trip ID:<%= @trip.id %></h3>
-  <h3>Passenger: <%= @trip.passenger.name %></h3>
-  <h3>Driver: <%= @trip.driver.name %></h3>
+  <h3>Passenger:<%=link_to @trip.passenger.name, passenger_path(@trip.passenger) %></h3>
+  <h3>Driver:<%= link_to @trip.driver.name, driver_path(@trip.driver) %></h3>
   <h3>Cost: <%= @trip.cost %></h3>
   <h3>Date: <%= @trip.date %></h3>
   <h3>Rating:<%= @trip.rating %></h3>
