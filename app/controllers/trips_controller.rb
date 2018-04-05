@@ -3,9 +3,9 @@ class TripsController < ApplicationController
     @trips = Trip.all
   end
 
-  # def new
-  #   @trip Trip.new
-  # end
+  def new
+    @trip = Trip.new
+  end
 
   def create
     passenger = Passenger.find_by(id: params[:passenger_id])
