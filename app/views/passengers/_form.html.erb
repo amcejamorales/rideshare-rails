@@ -3,14 +3,13 @@
   <%= page_title %>
 </h4>
 
+
+
 <%= form_for @passenger do |f| %>
 <div>
   <%= f.label :name %>
   <%= f.text_field :name %>
 </div>
-
-
-
 
 <div>
   <%= f.label :phone_num %>
@@ -21,9 +20,17 @@
   <%= f.submit %>
 </div>
 <% end %>
-<div>
-<%= link_to("Delete", passenger_path(@passenger), method: :delete, data: { confirm: "Are you sure you want to delete this passenger?" }) %>
-</div>
+
 <div>
 <%= link_to "List of Passengers", passengers_path %>
 </div>
+
+<% if @passenger.errors.any? %>
+  <ul class="errors">
+    <% @passenger.errors.each do |column, message| %>
+      <li>
+        <strong><%= column.capitalize %></strong> <%= message %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
