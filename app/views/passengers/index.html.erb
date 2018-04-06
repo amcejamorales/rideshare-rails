@@ -1,18 +1,31 @@
+
 <h2>Passengers</h2>
+
 <%= link_to "Add a New Passenger", new_passenger_path%>
+
+
 <ul>
+
   <% @passengers.each do |passenger| %>
+  <section class = "passenger-box"
+  <aside class = "passenger-header">
   <li>
     <%= passenger.id %>
     <strong>
     <%= link_to passenger.name, passenger_path(passenger) %>
     </strong>
-    <%= passenger.phone_num %>
-
-    <%= link_to "Edit", edit_passenger_path(passenger) %>
-
-    <%= link_to("Delete", passenger_path(passenger), method: :delete, data: { confirm: "Are you sure you want to delete this passenger?" }) %>
-
   </li>
+</aside>
+   <li>
+    <%= passenger.phone_num %>
+    </li>
+    <aside class = "passenger-footer">
+    <li>
+    <%= link_to "Edit", edit_passenger_path(passenger) %>
+    <%= link_to("Delete", passenger_path(passenger), method: :delete, data: { confirm: "Are you sure you want to delete this passenger?" }) %>
+  </li>
+</aside>
+</section>
   <% end %>
+
 </ul>

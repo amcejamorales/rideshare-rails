@@ -1,3 +1,22 @@
 // Place all the styles related to the passengers controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+ul{
+  list-style: none;
+  text-decoration: none;
+  display:flex;
+  flex-wrap: wrap;
+
+
+
+}
+
+.passenger-box{
+  padding: 4em;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+border:1px solid powderblue;
+align-content: flex-end;
+background-image: linear-gradient(white, powderblue, lightblue);
+}
