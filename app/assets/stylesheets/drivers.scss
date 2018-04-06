@@ -1,3 +1,29 @@
 // Place all the styles related to the drivers controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+ul{
+  list-style: none;
+  text-decoration: none;
+  display:flex;
+  flex-wrap: wrap;
+
+}
+
+h2{
+  text-align: center;
+}
+
+.add-link{
+  text-align: center;
+}
+
+.driver-box{
+  padding: 4em;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+border:1px solid powderblue;
+align-content: flex-end;
+background-image: linear-gradient(#7280B3, white ,#800000);
+
+}
