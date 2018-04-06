@@ -7,8 +7,14 @@ ul{
   display:flex;
   flex-wrap: wrap;
 
+}
 
+h2{
+  text-align: center;
+}
 
+.add-link{
+  text-align: center;
 }
 
 .passenger-box{
@@ -19,4 +25,16 @@ ul{
 border:1px solid powderblue;
 align-content: flex-end;
 background-image: linear-gradient(white, powderblue, lightblue);
+
+}
+
+.passenger-box a:link {
+  color: #000000;
+  text-decoration: none;
+}
+.passenger-box a:visited {
+  color: #800000;
+}
+.passenger-box a:hover {
+  color: #7280B3;
 }
