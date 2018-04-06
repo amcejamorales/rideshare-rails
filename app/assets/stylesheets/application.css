@@ -48,3 +48,18 @@ header ul li a {
   text-decoration: none;
   color: #ffffff;
 }
+
+header a:hover {
+  color: #000000;
+}
+
+a:link {
+  color: #7280B3;
+  text-decoration: none;
+}
+a:visited {
+  color: #800000;
+}
+a:hover {
+  color: #000000;
+}

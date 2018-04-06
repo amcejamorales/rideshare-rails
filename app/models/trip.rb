@@ -5,7 +5,7 @@ class Trip < ApplicationRecord
 
 
 def convert_to_currency(n)
-  n= n/100
+  n = n/100
   return number_to_currency(n)
 end
 end
