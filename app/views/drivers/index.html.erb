@@ -1,7 +1,35 @@
-<p>
-  <%= link_to 'Add Driver', new_driver_path %>
-</p>
+<h2>Drivers</h2>
 
+<section class = "add-link">
+<%= link_to "Add a New Driver", new_driver_path%>
+</section>
+
+<ul>
+
+  <% @drivers.each do |driver| %>
+  <section class = "driver-box"
+  <aside class = "driver-header">
+  <li>
+    <%= driver.id %>
+    <strong>
+    <%= link_to driver.name, driver_path(driver) %>
+    </strong>
+  </li>
+</aside>
+   <li>
+    <%= driver.vin %>
+    </li>
+    <aside class = "driver-footer">
+    <li>
+    <%= link_to "Edit", edit_driver_path(driver) %>
+    <%= link_to("Delete", driver_path(driver), method: :delete, data: { confirm: "Are you sure you want to delete this driver?" }) %>
+  </li>
+</aside>
+</section>
+  <% end %>
+
+</ul>
+<!--
 <p>
   id:
   name:
@@ -15,4 +43,4 @@
     <%= link_to 'Edit', edit_driver_path(driver) %> |
     <%= link_to 'Delete', driver_path(driver.id), method: :delete, data: { confirm: "Are you sure you want to delete Driver #{ driver.name }?" } %>
   </p>
-<% end %>
+<% end %> -->
