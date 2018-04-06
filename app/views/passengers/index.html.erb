@@ -7,8 +7,6 @@ Search Form
 <%= submit_tag "Search" %>
 <% end %>
 
-
-
 <% if !(@passengers.present?) %>
   <p>There are no passengers containing the term(s) <%= params[:search] %>.</p>
 <% end %>
