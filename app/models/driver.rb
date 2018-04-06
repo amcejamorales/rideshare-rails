@@ -26,4 +26,8 @@ class Driver < ApplicationRecord
     number_with_precision(average_rating, precision: 1)
   end
 
+  def self.search(search)
+    where("name ILIKE ? or vin ILIKE ?", "%#{search}%", "%#{search}%")
+  end
+
 end

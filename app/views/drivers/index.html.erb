@@ -1,8 +1,16 @@
 <h2>Drivers</h2>
 
+<%= form_tag(drivers_path, :method => "get", id: "search-form") do %>
+<%= text_field_tag :search, params[:search], placeholder: "Search Drivers" %>
+<%= submit_tag "Search" %>
+<% end %>
+
 <section class = "add-link">
 <%= link_to "Add a New Driver", new_driver_path%>
 </section>
+<% if !(@drivers.present?) %>
+  <p>There are no drivers containing the term(s) <%= params[:search] %>.</p>
+<% end %>
 
 <ul>
 
