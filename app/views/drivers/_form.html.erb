@@ -4,11 +4,22 @@
 </h4>
 
 <%= form_for @driver do |f| %>
+<div>
   <%= f.label :name %>
   <%= f.text_field :name %>
+</div>
 
+<div>
   <%= f.label :vin %>
   <%= f.text_field :vin %>
+</div>
 
+<div>
   <%= f.submit %>
+</div>
+
 <% end %>
+
+<div>
+<%= link_to "List of Drivers", drivers_path %>
+</div>

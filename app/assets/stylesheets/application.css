@@ -64,3 +64,26 @@ a:visited {
 a:hover {
   color: #000000;
 }
+
+form {
+  margin: 20px;
+}
+
+form div {
+  margin: 20px;
+}
+
+form div label {
+  display: inline-block;
+  min-width: 100px;
+}
+
+form input[type="text"] {
+  border: solid 1px #ccc;
+  min-height: 20px;
+}
+
+form input[type="submit"] {
+  border: solid 1px #ccc;
+  min-height: 20px;
+}

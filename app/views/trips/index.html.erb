@@ -34,7 +34,8 @@
         <%= trip.date %>
       </li>
       <li>
-        <%= link_to trip.rating, edit_trip_path(trip) %>
+        <% trip_name = trip.rating.nil? ? "add rating" : trip.rating %>
+        <%= link_to trip_name, edit_trip_path(trip) %>
       </li>
       <li>
         <%=trip.convert_to_currency(trip.cost) %>
