@@ -1,5 +1,17 @@
 
 <h2>Passengers</h2>
+Search Form
+
+<%= form_tag(passengers_path, :method => "get", id: "search-form") do %>
+<%= text_field_tag :search, params[:search], placeholder: "Search Passengers" %>
+<%= submit_tag "Search" %>
+<% end %>
+
+
+
+<% if !(@passengers.present?) %>
+  <p>There are no passengers containing the term(s) <%= params[:search] %>.</p>
+<% end %>
 
 <section class = "add-link">
 <%= link_to "Add a New Passenger", new_passenger_path%>
