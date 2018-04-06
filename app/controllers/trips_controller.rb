@@ -1,6 +1,11 @@
 class TripsController < ApplicationController
   def index
     @trips = Trip.all.order(:id)
+    if params[:search]
+      @trips = Trip.search(params[:search]).order("created_at ASC")
+    else
+      @trips = Trip.all.order('created_at ASC')
+    end
   end
 
   def new
