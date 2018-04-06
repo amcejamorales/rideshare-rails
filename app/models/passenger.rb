@@ -13,4 +13,11 @@ class Passenger < ApplicationRecord
    total_cost = total_cost/100
    return number_to_currency(total_cost)
   end
+
+
+def self.search(search)
+  where("name ILIKE ? or phone_num ILIKE ?", "%#{search}%", "%#{search}%")
+end
+
+
 end
