@@ -1,3 +1,30 @@
 // Place all the styles related to the Trips controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+ul.trip {
+  display: block;
+}
+
+ul.trip-line {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+ul.trip-line li {
+  display: inline-block;
+}
+
+ul.trip > li:nth-child(even) {
+  background-color: #ccc;
+}
+
+a:link {
+  color: #000000;
+  text-decoration: none;
+}
+a:visited {
+  color: #800000;
+}
+a:hover {
+  color: #7280B3;
+}
